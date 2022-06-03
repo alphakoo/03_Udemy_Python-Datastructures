@@ -1,0 +1,36 @@
+import random as rnd
+
+# create new arry
+numbers = rnd.sample(range(1, 100), 10)
+
+# numbers
+
+print(numbers)                  # checking
+
+# parameter is numbers as arry
+def bubble_sort2(arry):
+    
+    flag = True                 # swap checking variable
+
+    while flag:
+
+        # print curent status
+        print('status:', arry)
+
+        # swap not happend
+        flag = False
+
+        # comparison
+        for x in range(len(arry)-1):
+
+            if arry[x] > arry[x+1]:
+
+                # swap
+                arry[x], arry[x+1] = arry[x+1], arry[x]
+
+                # swap happened
+                flag = True      
+
+bubble_sort2(numbers)
+
+print(numbers)
